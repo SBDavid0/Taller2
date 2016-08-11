@@ -69,6 +69,7 @@
       <object>objects\objllaverosa</object>
       <object>objects\objllaveamarilla</object>
     </objects>
+    <object>objects\objpuertallaves</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\inicio</room>
@@ -76,6 +77,7 @@
     <room>rooms\nivel2</room>
     <room>rooms\nivel3</room>
     <room>rooms\nivel4</room>
+    <room>rooms\llaves</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
