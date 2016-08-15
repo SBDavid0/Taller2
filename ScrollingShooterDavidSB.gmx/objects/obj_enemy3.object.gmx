@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>vspeed = 4;
+            <string>
+vspeed = 4;
 </string>
           </argument>
         </arguments>
@@ -83,12 +84,11 @@ if ( die == 1){
 with(other){//the bullet
     instance_destroy();
 }
-instance_create(x,y, obj_exploenemy)
+instance_create(x,y, obj_exploenemy);
 x= irandom_range (sprite_width/2,  room_width- sprite_width/2);
-y = sprite_height/2;
-score = score + 5;
-show_debug_message(score);
-audio_play_sound(snd_exploenemy, 10, false);
+y = -sprite_height/2;
+score = score + 20;
+show_debug_message("score " + string(score));
 </string>
           </argument>
         </arguments>
