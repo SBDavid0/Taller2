@@ -49,6 +49,9 @@
     <object>objects\obj_controller_enemy</object>
     <object>objects\obj_controller_life</object>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\tl_enemies</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
