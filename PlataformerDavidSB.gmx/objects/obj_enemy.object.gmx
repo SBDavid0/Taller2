@@ -28,6 +28,66 @@
             <string>
 
 dir = -1;
+movespeed = 3;
+grav = 0.2;
+hsp = 0;
+vsp = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hsp = dir * movespeed;
+vsp += grav;
+
+//colicion horizontal
+if (place_meeting(x+hsp, y, obj_block)){
+    while(!place_meeting(x+sign(hsp), y, obj_block)){
+        x += sign(hsp);
+    }
+    hsp = 0;
+    
+    dir *= -1;
+}
+
+x += hsp;
+
+//colicion vertical
+if (place_meeting(x, y+vsp, obj_block)){
+    while(!place_meeting(x, y+sign(vsp), obj_block)){
+        y += sign(vsp);
+    }
+    vsp = 0;
+}
+y += vsp;
+
+//colicion enemigo
+if (place_meeting(x, y, obj_ball)){
+    if (obj_ball.y &lt; y-16){
+        with(obj_ball) vsp = -jumpspeed;
+        instance_destroy();
+    }
+    else{
+        game_restart();
+    }
+}
 </string>
           </argument>
         </arguments>
