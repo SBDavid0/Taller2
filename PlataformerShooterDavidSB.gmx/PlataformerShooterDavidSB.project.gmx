@@ -20,9 +20,14 @@
     <sprite>sprites\spr_restart</sprite>
     <sprite>sprites\spr_life</sprite>
     <sprite>sprites\spr_explo</sprite>
+    <sprite>sprites\spr_youlose</sprite>
+    <sprite>sprites\spr_youwin</sprite>
+    <sprite>sprites\spr_nube</sprite>
+    <sprite>sprites\spr_bottom</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -34,11 +39,14 @@
     <object>objects\obj_restart</object>
     <object>objects\obj_controllerlife</object>
     <object>objects\obj_explo</object>
+    <object>objects\obj_youlose</object>
+    <object>objects\oj_youwin</object>
+    <object>objects\obj_nube</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\level1</room>
-    <room>rooms\win</room>
     <room>rooms\level2</room>
+    <room>rooms\win</room>
     <room>rooms\YouLose</room>
   </rooms>
   <help>
